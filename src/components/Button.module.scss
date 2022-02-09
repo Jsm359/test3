@@ -1,0 +1,59 @@
+@import "../settings.scss";
+@import "../base.scss";
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #73AFFF;
+  box-sizing: border-box;
+  background-color: #73AFFF;
+  
+
+  @include desktop {
+    width: widthD(125);
+    padding: widthD(12) widthD(20) widthD(12) widthD(20);
+    border-radius: widthD(6);
+  }
+
+  @include mobile {
+    width: widthM(75);
+    border-radius: widthM(6);
+  }
+
+  &:hover {
+    background-color: #5ca2ff;
+  }
+
+  &[disabled] {
+    background-color: #90bffc;
+    color: #ccc;
+  }
+
+  &.active{
+    background-color: #368af8;
+    
+    &:hover {
+      background-color: red;
+    }
+  }
+}
+
+
+
+.text-in-btn {
+  font-family: monospace,sans-serif;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  user-select: none;
+  
+  @include desktop {
+    font-size: widthD(18);
+  }
+
+  @include mobile {
+    font-size: widthM(14);
+  }
+}

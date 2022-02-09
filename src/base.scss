@@ -1,0 +1,8 @@
+@import "settings";
+
+.container {
+  @include desktop {
+    width: viewWidth(1920);
+    margin: auto;
+  }
+}

@@ -1,0 +1,27 @@
+@use "sass:math";
+
+@function widthD($px) {
+  $widthPercent: math.div(1440, 100);
+  $vw: math.div($px, $widthPercent);
+
+  @return $vw + vw;
+}
+
+@function widthM($px) {
+  $widthPercent: math.div(320, 100);
+  $vw: math.div($px, $widthPercent);
+
+  @return $vw + vw;
+}
+
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
