@@ -3,6 +3,7 @@
 .container {
   @include desktop {
     width: viewWidth(1920);
-    margin: auto;
+    margin: 0;
+    padding: 0;
   }
 }

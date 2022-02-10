@@ -1,5 +1,6 @@
 import React from 'react';
-import  Button from './components/Button';
+import { Button } from './components/Button/Button';
+import { Select } from './components/Select/Select';
 import styles from './App.module.scss'
 import classnames from 'classnames/bind';
 
@@ -7,14 +8,14 @@ import classnames from 'classnames/bind';
 
 const cx = classnames.bind(styles)
 
-const App = () => {
+export const App = () => {
   return (
     <div className={cx('App')}>
-      <Button children='Кнопка' disabled />
-      <Button children='Кнопка' active />
+      {/* <Button className={cx('btn-log')} children='Кнопка' active /> */}
+      <Select placeholder='Добавить элемент' />
     </div>
   );
 }
 
-export default App
+
 

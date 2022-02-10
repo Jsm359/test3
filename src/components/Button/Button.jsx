@@ -6,16 +6,15 @@ import PropTypes from 'prop-types';
 
 const cx = classnames.bind(styles)
 
-const Button = ({ children, onClick, disabled, active, className }) => {
+export const Button = ({ children, onClick, disabled, active, className }) => {
   const onClickAction = e => disabled ? e.preventDefault() : onClick(e);  
   
-
   return (
     <button className={cx('btn', className, {active})} onClick={onClickAction} disabled={disabled}>
       <span className={cx('text-in-btn')}>
         {children}
       </span>
-    </button>
+    </button> 
   );
 }
 
@@ -35,4 +34,4 @@ Button.defaultProps = {
   className: ''
 }
 
-export default Button;
+

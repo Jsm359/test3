@@ -1,10 +1,8 @@
-@import "../settings.scss";
-@import "../base.scss";
+@import "/src/settings.scss";
+@import "/src/base.scss";
 
 .btn {
   position: relative;
-  display: flex;
-  align-items: center;
   cursor: pointer;
   border: 1px solid #73AFFF;
   box-sizing: border-box;
@@ -13,17 +11,23 @@
 
   @include desktop {
     width: widthD(125);
-    padding: widthD(12) widthD(20) widthD(12) widthD(20);
+    padding: widthD(12) widthD(20);
     border-radius: widthD(6);
   }
 
   @include mobile {
     width: widthM(75);
+    padding: widthM(8) widthM(12);
     border-radius: widthM(6);
   }
 
   &:hover {
     background-color: #5ca2ff;
+    transition: .8s;
+  }
+
+  &:not(:hover) {
+    transition: .8s;
   }
 
   &[disabled] {
@@ -44,8 +48,6 @@
 
 .text-in-btn {
   font-family: monospace,sans-serif;
-  display: flex;
-  align-items: center;
   color: #fff;
   user-select: none;
   
@@ -54,6 +56,6 @@
   }
 
   @include mobile {
-    font-size: widthM(14);
+    font-size: widthM(12);
   }
 }
