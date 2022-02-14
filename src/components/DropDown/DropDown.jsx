@@ -1,18 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react'
 import classnames from 'classnames/bind';
-import styles from './Select.module.scss';
+import styles from './DropDown.module.scss';
 
 const cx = classnames.bind(styles)
 
-export const Select = ({ className }) => {
-  const selectRef = useRef(null)
+export const DropDown = ({ className }) => {
+  const DropDownRef = useRef(null)
   const [isOpen, setOpen] = useState(false)
   const [arr] = useState(['Profile', 'message', 'notification', 'help', 'setting'])
   const onClickOpen = () => setOpen(!isOpen)
 
   useEffect(() => {
     const pageClickEvent = (e) => {
-      if (selectRef.current !== null && !selectRef.current.contains(e.target)) {
+      if (DropDownRef.current !== null && !DropDownRef.current.contains(e.target)) {
         setOpen(!isOpen);
       }
     };
@@ -33,10 +33,10 @@ export const Select = ({ className }) => {
 
   return (
     <div>
-      <div className={cx('select-wrap')}>
-        <div className={cx('select')} onClick={onClickOpen}>
-          <div className={cx('header')}>select</div>
-          <div ref={selectRef} className={cx('select-list', isOpen ? 'active' : '')}>
+      <div className={cx('dropdown-wrap')}>
+        <div className={cx('dropdown')} onClick={onClickOpen}>
+          <div className={cx('header')}>dropdown</div>
+          <div ref={DropDownRef} className={cx('dropdown-list', isOpen ? 'active' : '')}>
             <ul>
               {result}
             </ul>

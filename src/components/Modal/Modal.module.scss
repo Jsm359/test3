@@ -1,0 +1,34 @@
+@import "/src/settings.scss";
+@import "/src/base.scss";
+
+.Modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.Modal-content{
+  background-color: #fff;
+
+  @include desktop {
+    min-width: widthD(250px);
+    padding: widthD(25);
+    border-radius: widthD(16);
+  }
+
+  @include mobile {
+    min-width: widthM(250px);
+    padding: widthM(25);
+    border-radius: widthM(16);
+  }
+}
