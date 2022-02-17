@@ -3,4 +3,30 @@
 
 .post {
   margin-bottom: 15px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-btns {
+  display: flex;
+}
+
+
+.transition-post-enter {
+  opacity: 0;
+
+  &-active {
+    transform: translateX(350px);
+    transition: all 500ms ease-in;
+  }
+
+  &-exit {
+    opacity: 1;
+  }
+
+  &-exit-active {
+    transform: translateX(-350px);
+    transition: all 500ms ease-in;
+  }
 }

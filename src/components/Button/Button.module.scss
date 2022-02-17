@@ -5,19 +5,15 @@
   cursor: pointer;
   border: 1px solid #73AFFF;
   box-sizing: border-box;
-  background-color: #73AFFF;
+  background-color: transparent;
   
 
   @include desktop {
-    width: widthD(125);
-    padding: widthD(12) widthD(20);
-    border-radius: widthD(6);
+    padding: widthD(5) widthD(15);
   }
 
   @include mobile {
-    width: widthM(75);
-    padding: widthM(8) widthM(12);
-    border-radius: widthM(6);
+    padding: widthM(5) widthM(15);
   }
 
   &:hover {
@@ -47,14 +43,14 @@
 
 .text-in-btn {
   font-family: monospace,sans-serif;
-  color: #fff;
+  color: teal;
   user-select: none;
   
   @include desktop {
-    font-size: widthD(18);
+    font-size: widthD(12);
   }
 
   @include mobile {
-    font-size: widthM(12);
+    font-size: widthM(6);
   }
 }
