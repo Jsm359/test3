@@ -11,8 +11,8 @@ export const Pagintaion = ({totalPages, page, changePage}) => {
 
   return (
     <div>
-      {pagesArray.map(p =>
-        <Button onClick={() => changePage(p)} className={cx(page === p ? 'page-current' : 'page')}>{p}</Button>
+      {pagesArray.map((p) =>
+        <Button key={p} onClick={() => changePage(p)} className={cx(page === p ? 'page-current' : 'page')}>{p}</Button>
       )}
     </div>
   )

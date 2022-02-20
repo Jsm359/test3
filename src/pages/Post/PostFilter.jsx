@@ -1,6 +1,6 @@
 import React from 'react';
-import { Input } from '../components/Input/Input';
-import { SelectForm } from '../components/Select/SelectForm';
+import { Input } from '../../components/Input/Input';
+import { SelectForm } from '../../components/Select/SelectForm';
 
 export const Postfilter = ({filter, setFilter}) => {
   return (

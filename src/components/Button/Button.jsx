@@ -6,10 +6,10 @@ import styles from './Button.module.scss';
 const cx = classnames.bind(styles)
 
 export const Button = ({ children, onClick, disabled, active, className }) => {
-  const onClickAction = e => disabled ? e.preventDefault() : onClick(e);  
+  const onClickAction = event => disabled ? event.preventDefault() : onClick(event);  
   
   return (
-    <button className={cx('btn', className, {active})} onClick={onClickAction} disabled={disabled}>
+    <button key={Button} className={cx('btn', className, {active})} onClick={onClickAction} disabled={disabled}>
       <span className={cx('text-in-btn')}>
         {children}
       </span>
